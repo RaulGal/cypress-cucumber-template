@@ -1,0 +1,29 @@
+{
+
+  "name": "cypress-cucumber-template",
+  "version": "1.0.0",
+  "description": "plantilla de pruebas de automatizacion",
+  "main": "index.js",
+
+  "scripts": {
+    "console-test": "node test-launcher.js",
+    "cypress:open": "cypress open"
+  },
+  "dependencies": {
+    "cucumber": "^6.0.7",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^9.3.3",
+    "cypress": "^13.2.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": "cypress/e2e/**/*.js",
+    "cucumberJson": {
+      "generated": true,
+      "outputFolder": "reports/cucumber"
+    }
+    }
+  }
+
