@@ -3,8 +3,8 @@ class Common {
 
     }
 
-    visitUrl(){
-        cy.visit("https://raulgalvan.netlify.app/");
+    visitUrl(url){
+        cy.visit(url);
     }
 
 

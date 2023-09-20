@@ -1,6 +1,6 @@
-import { Given } from "cypress-cucumber-preprocessor/steps";
+import {Given, When, Then} from '@badeball/cypress-cucumber-preprocessor';
+import { common } from '../../support/page_actions/common_actions';
 
-Given("accedemos a la url", () => {
-  // Aquí debes escribir el código para acceder a la URL en tu prueba de Cypress.
-  cy.visit("https://tu-url.com"); // Reemplaza "tu-url.com" con la URL real que deseas visitar.
+Given("accedemos a la url {string}", (url) => {
+  common.visitUrl(url); 
 });

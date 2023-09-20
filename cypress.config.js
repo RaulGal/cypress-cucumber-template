@@ -1,4 +1,7 @@
 const { defineConfig } = require("cypress");
+const cucumber = require("@badeball/cypress-cucumber-preprocessor");
+const browserify = require("@badeball/cypress-cucumber-preprocessor/browserify");
+// const cucumber = require('cypress-cucumber-preprocessor');
 
 module.exports = defineConfig({
   chromeWebSecurity: true,
@@ -16,11 +19,14 @@ module.exports = defineConfig({
   }
 },
   e2e: {
-    setupNodeEvents(on, config) {
-      return require('./cypress/plugins/index.js')(on, config);
+    setupNodeEvents: async function (on, config) {
+      // Esto es requerido para que el preprocesador pueda generar informes JSON después de cada ejecución, y más.
+      await cucumber.addCucumberPreprocessorPlugin(on, config);
+      on("file:preprocessor", browserify.default(config));
+      return config;
     },
-    specPattern: 'cypress/e2e/features/**/*.feature',
-    excludeSpecPattern:'cypress/e2e/features/**/*.js',
+    specPattern: 'cypress/e2e/features/*.feature',
+    excludeSpecPattern:'cypress/e2e/features/*.js',
     compilerOptions: {
       types: ["cypress", "@testing-library/cypress"]
     }
