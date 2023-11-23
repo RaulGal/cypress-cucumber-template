@@ -4,8 +4,11 @@ Esto es un proyecto plantilla para crear tu propio proyecto de automatizacion de
 * Se sigue la metodologia POM (Page, Object, Model) usando la sintaxis Gherkin (Cucumber), lo que hace mas legible para los usuarios sin formación técnica como por la máquina. Ademas de esto crea un diccionario interno con las instrucciones automatizadas de tu proyecto.
 * El stack principal del ecosistema es:
 | Herramienta | Descripción |
+
 | ------ | ------ |
+
 | Cypress | Herramienta para ejecutar tests E2E |
+
 | cypress-cucumber-preprocessor | Plugin que permite a Cypress entender syntaxis Gherkin (Cucumber) |
 
 ## Empezando
