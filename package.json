@@ -30,9 +30,11 @@
 
   "devDependencies": {
 
+    "@testing-library/cypress": "^10.0.1",
+
     "@testing-library/dom": "^9.3.3",
 
-    "cypress": "^13.2.0"
+    "cypress": "^13.6.0"
 
   },
 
@@ -41,7 +43,9 @@
     "nonGlobalStepDefinitions": true,
 
     "stepDefinitions": "cypress/e2e/page_steps/*.js",
+
     "filterSpecs": true,
+
     "omitFiltered": true,
 
     "cucumberJson": {

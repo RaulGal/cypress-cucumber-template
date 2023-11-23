@@ -7,6 +7,14 @@ class Common {
         cy.visit(url);
     }
 
+    clickButtonName(name){
+        cy.findByText(name, {selector: 'button'}).click();
+    }
+
+    clickElementName(name){
+        cy.findByText(name).click();
+    }
+
 
 }
 
