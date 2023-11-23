@@ -6,9 +6,9 @@ Esto es un proyecto plantilla para crear tu propio proyecto de automatizacion de
 
 | Herramienta | Descripción |
 
-| ------ | ------ |
+| ----------- | ----------- |
 
-| Cypress | Herramienta para ejecutar tests E2E |
+| Cypress     | Herramienta para ejecutar tests E2E |
 
 | cypress-cucumber-preprocessor | Plugin que permite a Cypress entender syntaxis Gherkin (Cucumber) |
 
