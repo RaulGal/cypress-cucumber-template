@@ -12,3 +12,17 @@ When("usuario hace click en el boton {string}", (name) => {
 When("usuario hace click en el elemento {string}", (name) => {
   common.clickElementName(name);
 });
+
+When("accedemos a la url de ejemplo", () => {
+  common.visitUrlEnv();
+});
+
+When("usuario hace click en el elemento {string} numero {int}", (name, number) => {
+  common.clickElementNameWithNumber(name, number);
+});
+
+When("esperamos {int} segundos", (number) => {
+  const seconds = number * 1000 
+  cy.wait(seconds);
+});
+

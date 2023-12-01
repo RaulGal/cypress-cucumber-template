@@ -24,3 +24,14 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 import '@testing-library/cypress/add-commands'
+
+
+Cypress.Commands.add('getEnv', () => {
+    return cy.readFile('cypress.env.json').then((config) => {
+      Cypress.env('currentEnv', Cypress.env('ENV') || 'dev'); // Si no se proporciona ENV, establecer el entorno como dev por defecto
+      const envConfig = config[Cypress.env('currentEnv')];
+      Cypress.env('envConfig', envConfig);
+      return envConfig;
+    });
+  });
+  

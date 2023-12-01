@@ -11,8 +11,11 @@
   "scripts": {
 
     "console-test": "node test-launcher.js",
-
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "ConsoleTest:dev": "cypress run --env ENV=dev",
+    "ConsoleTest:pre": "cypress run --env ENV=pre",
+    "CypressOpen:dev": "cypress open --env ENV=dev",
+    "CypressOpen:pre": "cypress open --env ENV=pre"
 
   },
 
